@@ -30,12 +30,26 @@
         .bloc2{
             height: 700px;
             width: 100%;
-            margin-top: 60px;
+            margin-top: 160px;
+            display: flex;
         }
         .bloc2 .left{width: 50%;
             background-image: url('assets/images/img_bloc2.png');
-            background-size: contain;
+            background-size: 170%;
             background-repeat: no-repeat;
+        }
+        .bloc2 img{
+            max-height:100px;
+            max-width: 50px;
+            overflow: hidden;
+        }
+        .bloc2 .right {
+            width: 50%;
+            font-size: 60px;
+            margin: auto;
+        }
+        .bloc2 b{
+            font-style: italic;
         }
     </style>
 </head>
@@ -54,7 +68,9 @@
         <img src="assets/images/bannersv5.gif" style="width: 100%">
     </div>
     <div class="bloc2">
-        <div class="left"></div>
+        <div class="left">
+<!--            <img src="assets/images/img_bloc2_bis.png">-->
+        </div>
         <div class="right">Avec <b>vous</b> <br> nous avons créé<br> <b>SkanMyskin</b>.</div>
     </div>
 </div>
