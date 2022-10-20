@@ -26,29 +26,42 @@
         }
         .bloc1{
             max-height: 750px;
-        }
+
         .bloc2{
-            height: 700px;
-            width: 100%;
             margin-top: 160px;
+        }
+        .bloc22{
+            height: 620px;
+            width: 100%;
             display: flex;
         }
-        .bloc2 .left{width: 50%;
-            background-image: url('assets/images/img_bloc2.png');
+        .bloc22 .left{width: 50%;
             background-size: 170%;
             background-repeat: no-repeat;
         }
-        .bloc2 img{
-            max-height:100px;
-            max-width: 50px;
-            overflow: hidden;
+        .bloc2 .left {
+            background-image: url('assets/images/img_bloc2_b.png');
         }
-        .bloc2 .right {
+       .bloc22 .right , .bloc3 .left{
             width: 50%;
             font-size: 60px;
             margin: auto;
+            text-align: center;
         }
-        .bloc2 b{
+        .bloc3{
+            height: 620px;
+            width: 100%;
+            display: flex;
+        }
+        .bloc3 .right{width: 50%;
+            background-image: url('assets/images/img_bloc3.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        .bloc4 .left {
+            background-image: url('assets/images/img_bloc4.png');
+        }
+        b{
             font-style: italic;
         }
     </style>
@@ -67,11 +80,21 @@
     <div class="banner bloc1">
         <img src="assets/images/bannersv5.gif" style="width: 100%">
     </div>
-    <div class="bloc2">
+    <div class="bloc2 bloc22">
         <div class="left">
-<!--            <img src="assets/images/img_bloc2_bis.png">-->
         </div>
         <div class="right">Avec <b>vous</b> <br> nous avons créé<br> <b>SkanMyskin</b>.</div>
+    </div>
+    <div class="bloc3">
+        <div class="left">
+            et pour chacun <br> <b>de vos besoins</b> nous formulons des soins <br> <b>sur-mesure</b>
+        </div>
+        <div class="right"></div>
+    </div>
+    <div class="bloc4 bloc22">
+        <div class="left">
+        </div>
+        <div class="right">dosés au <b>maximum</b> <br> de leur<br> <b>efficacité</b>. </div>
     </div>
 </div>
 </body>
