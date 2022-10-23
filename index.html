@@ -75,19 +75,20 @@
         }
         .bloc22 b, .bloc3 b{
             font-size: 80px;}
-        .actifs{
+        .actifs, .bases{
             display: flex;
             color: #404040;
         }
-        .actifs .right{
+        .bases{margin-top: 100px}
+        .actifs .right , .bases .left{
             height: 115vh;
             overflow-y: scroll;
         }
-        .actifs .left{
+        .actifs .left , .bases .right{
             width: 45%;
             max-width: 45%;
         }
-        .actifs .left img{margin-top: 60px}
+        .actifs .left img, .bases .right img{margin-top: 60px}
         .small_title{
             color: #404040;
             font-size: 40px;
@@ -256,6 +257,42 @@
             </div>
         </div>
     </div>
+    <div class="bases">
+        <div class="left">
+            <div class="product-container">
+                <div class="p-slide-product">
+                    <div class="p-slide-img"><img  src="assets/images/legere.jpg"></div>
+                    <span class="p-slide-title">Base crème <b>- Légère </b><br> <b>12.50 €</b></span>
+                    <span class="p-slide-title2">Beurre de Karité & Miel</span>
+                </div>
+                <div class="p-slide-product">
+                    <div class="p-slide-img"><img src="assets/images/onctueuse.jpg"></div>
+                    <span class="p-slide-title">Base crème <b>- Onctueuse </b><br> <b>12.50 €</b></span>
+                    <span class="p-slide-title2"> Beurre de Karité & Miel</span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="p-slide-product">
+                    <div class="p-slide-img"><img src="assets/images/fondante_matifiante.jpg"></div>
+                    <span class="p-slide-title">Base crème <b>- Fondante Matifiante </b><br> <b>12.50 €</b></span>
+                    <span class="p-slide-title2"> Beurre de Karité & Miel</span>
+                </div>
+                <div class="p-slide-product">
+                    <div class="p-slide-img"><img src="assets/images/fondante-Travaillé_5.jpg"></div>
+                    <span class="p-slide-title">Base crème <b>- Fondante </b><br> <b>12.50 €</b></span>
+                    <span class="p-slide-title2"> Beurre de Karité & Miel</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="small_title">J’adopte <b>le #DIY</b></div>
+            <div class="title">LES<br> BASES</div>
+            <div class="text">Pour répondre à toutes les envies, nos bases actives offrent une expérience sensorielle unique adaptée à vos besoins.
+                En 1 minute, identifiez les besoins de votre peau.
+            </div>
+            <div class="button">#SKANMYSKIN</div>
+            <img src="assets/images/bases_gif.png" style="width: 100%">
+        </div>
 </div>
 </body>
 </html>
