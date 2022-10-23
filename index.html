@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Abbi</title>
     <style>
+        @font-face {
+            font-family: inter-regular;
+            src: url('assets/fonts/Inter Regular.ttf')
+        }
         .height-header{
             background-color: black;
             height: 32px;
@@ -45,8 +49,11 @@
        .bloc22 .right , .bloc3 .left{
             width: 50%;
             font-size: 60px;
+           font-family: inter-bold;
+           color: #404040;
             margin: auto;
             text-align: center;
+           text-transform: uppercase;
         }
         .bloc3{
             height: 620px;
@@ -60,9 +67,85 @@
         }
         .bloc4 .left {
             background-image: url('assets/images/img_bloc4.png');
+            background-position: center;
         }
         b{
             font-style: italic;
+            text-transform: lowercase;
+        }
+        .bloc22 b, .bloc3 b{
+            font-size: 80px;}
+        .actifs{
+            display: flex;
+            color: #404040;
+        }
+        .actifs .right{
+            height: 115vh;
+            overflow-y: scroll;
+        }
+        .actifs .left{
+            width: 45%;
+            max-width: 45%;
+        }
+        .actifs .left img{margin-top: 60px}
+        .small_title{
+            color: #404040;
+            font-size: 40px;
+            font-family: inter-bold;
+            margin-top: 60px;
+            padding-left: 30px;
+        }
+        .title{
+            color: #404040;
+            font: italic 85px inter-regular;
+            margin-top: 20px;
+            padding-left: 30px;
+        }
+        .text{
+            color: #404040;
+            font-size: 24px;
+            font-family: inter-regular;
+            margin-top: 20px;
+            padding-left: 30px;
+        }
+        .button{
+            margin-top: 20px;
+            padding-left: 30px;
+            font-family: inter-medium;
+            color: #404040;
+            border: #404040 solid 1px;
+            font-size: 27px;
+            padding: 10px;
+            width: 280px;
+        }
+        .product-container {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        .p-slide-product{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: 10px 20px;
+        }
+        .p-slide-img img{width: 100%}
+        .p-slide-title{
+            font: normal 20px inter-black ;
+            color: #404040;
+            margin-top: 20px;
+        }
+        .p-slide-title b{text-transform: initial}
+        .p-slide-title2{
+            font: normal 22px inter-regular ;
+            color: #404040;
+            margin-top: 20px;
+        }
+        .img_actif1:hover{
+            background-image: url('assets/images/actif_travaillé_1.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
@@ -83,18 +166,95 @@
     <div class="bloc2 bloc22">
         <div class="left">
         </div>
-        <div class="right">Avec <b>vous</b> <br> nous avons créé<br> <b>SkanMyskin</b>.</div>
+        <div class="right"><span style="text-transform: initial">Avec</span> <b>vous</b> <br> nous avons créé<br>
+            <b><a href="" style="color: ">SkanMyskin</a></b>.</div>
     </div>
     <div class="bloc3">
         <div class="left">
-            et pour chacun <br> <b>de vos besoins</b> nous formulons des soins <br> <b>sur-mesure</b>
+            et pour chacun <br> <b>de vos besoins</b><br> nous formulons des soins <br> <b>sur-mesure</b>
         </div>
         <div class="right"></div>
     </div>
     <div class="bloc4 bloc22">
         <div class="left">
         </div>
-        <div class="right">dosés au <b>maximum</b> <br> de leur<br> <b>efficacité</b>. </div>
+        <div class="right">dosés au <br> <b>maximum</b> <br> de leur<br> <b>efficacité</b>. </div>
+    </div>
+    <div class="bloc5">
+        <img src="assets/images/bloc5.png" style="width: 100%">
+    </div>
+    <div class="actifs">
+        <div class="left">
+        <div class="small_title">J’adopte <b>le #DIY</b></div>
+            <div class="title">LES<br> ACTIFS</div>
+            <div class="text">Pour répondre aux besoins de toutes les peaux, même les plus sensibles,
+                nous sélectionnons les meilleurs ingrédients et encapsulons leurs pouvoirs dans chacun de nos concentrés d’actifs. En 1 minute, identifiez les besoins de votre peau.
+            </div>
+            <div class="button">#SKANMYSKIN</div>
+            <img src="assets/images/actifs_gif.png" style="width: 100%">
+            </div>
+        <div class="right">
+            <div class="product-container">
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img class="img_actif1" src="assets/images/actif_1.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°1 <b>HYDRATATION</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+            </div>
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_2.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°2 <b>TACHES</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+            </div>
+            </div>
+            <div class="product-container">
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_1.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°3 <b>SENSIBILITÉ</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+            </div>
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_4.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°4 <b>ÉCLAT DU TEINT</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+            </div>
+            </div>
+            <div class="product-container">
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_5.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°5 <b>RÉGÉNÉRANT</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+            </div>
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_6.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°6 <b>REMODELANT</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+            </div>
+            </div>
+            <div class="product-container">
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_7.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°7 <b>FERMETÉ</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+            </div>
+            <div class="p-slide-product">
+                <div class="p-slide-img"><img src="assets/images/actif_8.jpg"></div>
+                <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°8 <b>HÂLE NATUREL</b><br> <b>12.50 €</b></span>
+                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+            </div>
+            </div>
+            <div class="product-container">
+                <div class="p-slide-product">
+                    <div class="p-slide-img"><img src="assets/images/actif_9.jpg"></div>
+                    <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°9 <b>RIDES</b><br> <b>12.50 €</b></span>
+                    <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                </div>
+                <div class="p-slide-product">
+                    <div class="p-slide-img"><img src="assets/images/actif_10.jpg"></div>
+                    <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°10 <b>BOUTONS</b><br> <b>12.50 €</b></span>
+                    <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
