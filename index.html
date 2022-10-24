@@ -3,6 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Abbi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".button").mouseover(function(){
+                $(this).addClass('button_apercu');
+            });
+            $(".button").mouseout(function(){
+                $(this).removeClass('button_apercu');
+            });
+            $(".button").click(function(){
+                window.location.href = "https://skanmyskin.com/selfy-miror";
+            });
+            $(".p-slide-title2").mouseover(function(){
+                $(this).find("span").hide();
+                $(this).find(".button_apercu").show();
+
+            });
+            $(".p-slide-title2").mouseout(function(){
+                $(this).find("span").show();
+                $(this).find(".button_apercu").hide();
+            });
+        });
+    </script>
+</head>
     <style>
         @font-face {
             font-family: inter-regular;
@@ -21,18 +45,26 @@
         header .left{
             display: flex;
             justify-content: space-between;
-            width: 52%;
+            width: 50%;
             font-family: inter-regular;
             font-size: 20px;
             height: 64px;
-            margin-left: 50px;
+            margin-left: 28px;
             margin-top: 25px;
         }
         .bloc1 {
             max-height: 750px;
         }
+        .square_gray{
+            z-index: 2;
+            margin: -50px auto;
+            text-align: center;
+            position: relative;
+        }
+        .square1{
+            margin: 70px auto 0;}
         .bloc2{
-            margin-top: 160px;
+            margin-top: -30px;
         }
         .bloc22{
             height: 620px;
@@ -75,19 +107,25 @@
         }
         .bloc22 b, .bloc3 b{
             font-size: 80px;}
-        .actifs, .bases{
+        .actifs, .bases, .nouveautes, .avis{
             display: flex;
             color: #404040;
         }
         .bases{margin-top: 100px}
-        .actifs .right , .bases .left{
+        .title_new{margin-top: 60px !important;}
+        .actifs .right , .bases .left, .nouveautes .products{
             height: 115vh;
             overflow-y: scroll;
         }
-        .actifs .left , .bases .right{
+        .actifs .left , .bases .right, .avis .left{
             width: 45%;
             max-width: 45%;
         }
+        .nouveautes .left{
+            width: 60%;
+            max-width: 60%;
+        }
+
         .actifs .left img, .bases .right img{margin-top: 60px}
         .small_title{
             color: #404040;
@@ -111,7 +149,7 @@
         }
         .button{
             margin-top: 20px;
-            padding-left: 30px;
+            margin-left: 30px;
             font-family: inter-medium;
             color: #404040;
             border: #404040 solid 1px;
@@ -136,18 +174,165 @@
             font: normal 20px inter-black ;
             color: #404040;
             margin-top: 20px;
+            min-height: 70px;
         }
         .p-slide-title b{text-transform: initial}
         .p-slide-title2{
             font: normal 22px inter-regular ;
             color: #404040;
             margin-top: 20px;
+            cursor: pointer;
         }
-        .img_actif1:hover{
-            background-image: url('assets/images/actif_travaillé_1.jpg');
-            background-size: 100%;
+        .p-slide-img{
             background-repeat: no-repeat;
+            background-size: 100%;
+            height: 328px;
         }
+       .actif_img1{
+           background-image: url('assets/images/actifs/actif_1.jpg');
+       }
+       .actif_img1:hover{
+           background-image: url('assets/images/actifs/actif_travaille_1.jpg');
+       }
+       .actif_img2{
+           background-image: url('assets/images/actifs/actif_2.jpg');
+       }
+       .actif_img2:hover{
+           background-image: url('assets/images/actifs/actif_travaille_2.jpg');
+       }
+       .actif_img3{
+           background-image: url('assets/images/actifs/actif_2.jpg');
+       }
+       .actif_img3:hover{
+           background-image: url('assets/images/actifs/actif_travaille_2.jpg');
+       }
+       .actif_img4{
+           background-image: url('assets/images/actifs/actif_4.jpg');
+       }
+       .actif_img4:hover{
+           background-image: url('assets/images/actifs/actif_travaille_4.jpg');
+       }
+       .actif_img5{
+           background-image: url('assets/images/actifs/actif_5.jpg');
+       }
+       .actif_img5:hover{
+           background-image: url('assets/images/actifs/actif_travaille_5.jpg');
+       }
+       .actif_img6{
+           background-image: url('assets/images/actifs/actif_6.jpg');
+       }
+       .actif_img6:hover{
+           background-image: url('assets/images/actifs/actif_travaille_6.jpg');
+       }
+       .actif_img7{
+           background-image: url('assets/images/actifs/actif_7.jpg');
+       }
+       .actif_img7:hover{
+           background-image: url('assets/images/actifs/actif_travaille_7.jpg');
+       }
+       .actif_img8{
+           background-image: url('assets/images/actifs/actif_8.jpg');
+       }
+       .actif_img8:hover{
+           background-image: url('assets/images/actifs/actif_travaille_8.jpg');
+       }
+       .actif_img9{
+           background-image: url('assets/images/actifs/actif_9.jpg');
+       }
+       .actif_img9:hover{
+           background-image: url('assets/images/actifs/actif_travaille_9.jpg');
+       }
+       .actif_img10{
+           background-image: url('assets/images/actifs/actif_10.jpg');
+       }
+       .actif_img10:hover{
+           background-image: url('assets/images/actifs/actif_travaille_10.jpg');
+       }
+       .base_img1{
+           background-image: url('assets/images/bases/legere.jpg');
+       }
+       .base_img1:hover{
+           background-image: url('assets/images/bases/legere-travaille.jpg');
+       }
+       .base_img2{
+           background-image: url('assets/images/bases/onctueuse.jpg');
+       }
+       .base_img2:hover{
+           background-image: url('assets/images/bases/onctueuse_travaille.jpg');
+       }
+       .base_img3{
+           background-image: url('assets/images/bases/fondante_matifiante.jpg');
+       }
+       .base_img3:hover{
+           background-image: url('assets/images/bases/fondante_matifiante_travaille.jpg');
+       }
+       .base_img4{
+           background-image: url('assets/images/bases/fondante-travaille.jpg');
+       }
+       .base_img4:hover{
+           background-image: url('assets/images/bases/fondante-travaille.jpg');
+       }
+       .nouveaute_img1{
+           background-image: url('assets/images/nouveautes/huile_apaisante.jpg');
+       }
+       .nouveaute_img1:hover{
+           background-image: url('assets/images/nouveautes/huile-travaille.jpg');
+       }
+       .nouveaute_img2{
+           background-image: url('assets/images/nouveautes/serum_collagene.jpg');
+       }
+       .nouveaute_img2:hover{
+           background-image: url('assets/images/nouveautes/serum_collagene-travaille.jpg');
+       }
+       .nouveaute_img3{
+           background-image: url('assets/images/nouveautes/serum_contour_yeux.jpg');
+       }
+       .nouveaute_img3:hover{
+           background-image: url('assets/images/nouveautes/serum_contour_yeux-travaille.jpg');
+       }
+       .nouveaute_img4{
+           background-image: url('assets/images/nouveautes/mousse_apaisante.jpg');
+       }
+       .nouveaute_img4:hover{
+           background-image: url('assets/images/nouveautes/mousse-travaille.jpg');
+       }
+       .button_apercu{
+           font: normal 25px inter-medium;
+           color: #F0ECE6;
+           background-color: rgba(64, 64, 64, 1);
+           text-align: center;
+           padding: 12px 8px;
+           letter-spacing: 1.6px;
+           cursor: pointer;
+       }
+       .avis .left{padding: 0 30px}
+       .avis .right{margin-top: 80px;}
+       .avis .text_small{
+           font: normal 20px inter-light;
+           margin-top: 80px;
+           padding: 30px ;
+       }
+       .avis .text{
+           font: normal 35px inter-medium;
+           margin-top: 100px;
+           max-width: 450px;
+       }
+        .p-slide-title2 .button_apercu{display: none}
+        .img_avis{
+            width: 48%;
+            left: 640px;
+            z-index: 2;
+            position: absolute;}
+        .avis .p-slide-title2{
+            text-align: right;
+        }
+        .avis .p-slide-img{
+            background-size: contain;
+            height: 300px;
+            width: 260px;
+            margin: 0 auto;
+        }
+        .avis .button{margin: 0 auto}
     </style>
 </head>
 <body>
@@ -158,24 +343,30 @@
         <div>Produits</div>
         <div>Diagnostic</div>
         <div>La marque</div>
-        <div>Abbi <br> France</div>
+        <div><img src="assets/images/abbi_seul.png" style="width: 52px"> <br> France</div>
         </div>
     </header>
     <div class="banner bloc1">
         <img src="assets/images/bannersv5.gif" style="width: 100%">
     </div>
+    <div class="square_gray square1">
+    <img src="assets/images/vector_gray.png"  width="90"></div>
     <div class="bloc2 bloc22">
         <div class="left">
         </div>
         <div class="right"><span style="text-transform: initial">Avec</span> <b>vous</b> <br> nous avons créé<br>
-            <b><a href="" style="color: ">SkanMyskin</a></b>.</div>
+            <b><a href="https://skanmyskin.com/selfy-miror" style="color: #404040">SkanMyskin</a></b>.</div>
     </div>
+    <div class="square_gray">
+        <img src="assets/images/vector_gray.png"  width="90"></div>
     <div class="bloc3">
         <div class="left">
             et pour chacun <br> <b>de vos besoins</b><br> nous formulons des soins <br> <b>sur-mesure</b>
         </div>
         <div class="right"></div>
     </div>
+    <div class="square_gray">
+        <img src="assets/images/vector_gray.png"  width="90"></div>
     <div class="bloc4 bloc22">
         <div class="left">
         </div>
@@ -197,62 +388,72 @@
         <div class="right">
             <div class="product-container">
             <div class="p-slide-product">
-                <div class="p-slide-img"><img class="img_actif1" src="assets/images/actif_1.jpg"></div>
+                <div class="p-slide-img actif_img1"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°1 <b>HYDRATATION</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                <span class="p-slide-title2"><span>Sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_2.jpg"></div>
+                <div class="p-slide-img actif_img2"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°2 <b>TACHES</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+                <span class="p-slide-title2"><span>Liposome de soja, pomme, framboise et feuille de pêcher</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             </div>
             <div class="product-container">
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_1.jpg"></div>
+                <div class="p-slide-img actif_img3"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°3 <b>SENSIBILITÉ</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                <span class="p-slide-title2"><span>Muguet du Japon et graines de caroube</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_4.jpg"></div>
+                <div class="p-slide-img actif_img4"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°4 <b>ÉCLAT DU TEINT</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+                <span class="p-slide-title2"><span>Arginine PCA et dérivé stabilisé de Vitamine C</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             </div>
             <div class="product-container">
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_5.jpg"></div>
+                <div class="p-slide-img actif_img5"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°5 <b>RÉGÉNÉRANT</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                <span class="p-slide-title2"><span>Extrait de Caviar et extrait d’Orchidée papillon</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_6.jpg"></div>
+                <div class="p-slide-img actif_img6"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°6 <b>REMODELANT</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+                <span class="p-slide-title2"><span>Collagène marin</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             </div>
             <div class="product-container">
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_7.jpg"></div>
+                <div class="p-slide-img actif_img7"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°7 <b>FERMETÉ</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                <span class="p-slide-title2"><span>Extrait de Kigelia Africana et extrait de Shiitaké</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             <div class="p-slide-product">
-                <div class="p-slide-img"><img src="assets/images/actif_8.jpg"></div>
+                <div class="p-slide-img actif_img8"></div>
                 <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°8 <b>HÂLE NATUREL</b><br> <b>12.50 €</b></span>
-                <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+                <span class="p-slide-title2"><span>Molécule de DHA et d’Erythrulose</span>
+                    <div class="button_apercu">APERCU</div></span>
             </div>
             </div>
             <div class="product-container">
                 <div class="p-slide-product">
-                    <div class="p-slide-img"><img src="assets/images/actif_9.jpg"></div>
+                    <div class="p-slide-img actif_img9"></div>
                     <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°9 <b>RIDES</b><br> <b>12.50 €</b></span>
-                    <span class="p-slide-title2">sucres naturels et cellules souches pures d’Immortelles des dunes</span>
+                    <span class="p-slide-title2"><span>Extrait de Paracress et extrait de soja</span>
+                    <div class="button_apercu">APERCU</div></span>
                 </div>
                 <div class="p-slide-product">
-                    <div class="p-slide-img"><img src="assets/images/actif_10.jpg"></div>
+                    <div class="p-slide-img actif_img10"></div>
                     <span class="p-slide-title">CONCENTRÉ D’ACTIFS N°10 <b>BOUTONS</b><br> <b>12.50 €</b></span>
-                    <span class="p-slide-title2"> liposome de soja, pomme, framboise et feuille de pêcher</span>
+                    <span class="p-slide-title2"><span>Ecorces de grenades et extrait de Bixa Orellana</span>
+                    <div class="button_apercu">APERCU</div></span>
                 </div>
             </div>
         </div>
@@ -261,26 +462,30 @@
         <div class="left">
             <div class="product-container">
                 <div class="p-slide-product">
-                    <div class="p-slide-img"><img  src="assets/images/legere.jpg"></div>
+                    <div class="p-slide-img base_img1"></div>
                     <span class="p-slide-title">Base crème <b>- Légère </b><br> <b>12.50 €</b></span>
-                    <span class="p-slide-title2">Beurre de Karité & Miel</span>
+                    <span class="p-slide-title2"><span>Beurre de Karité et Miel</span>
+                    <div class="button_apercu">APERCU</div></span>
                 </div>
                 <div class="p-slide-product">
-                    <div class="p-slide-img"><img src="assets/images/onctueuse.jpg"></div>
+                    <div class="p-slide-img base_img2"></div>
                     <span class="p-slide-title">Base crème <b>- Onctueuse </b><br> <b>12.50 €</b></span>
-                    <span class="p-slide-title2"> Beurre de Karité & Miel</span>
+                    <span class="p-slide-title2"><span>Huile d’Inca Inchi, d’amande douce et Beurre de Karité</span>
+                    <div class="button_apercu">APERCU</div></span>
                 </div>
             </div>
             <div class="product-container">
                 <div class="p-slide-product">
-                    <div class="p-slide-img"><img src="assets/images/fondante_matifiante.jpg"></div>
+                    <div class="p-slide-img base_img3"></div>
                     <span class="p-slide-title">Base crème <b>- Fondante Matifiante </b><br> <b>12.50 €</b></span>
-                    <span class="p-slide-title2"> Beurre de Karité & Miel</span>
+                    <span class="p-slide-title2"><span>Poudres végétales, Huile de Jojoba et Huile de Soja</span>
+                    <div class="button_apercu">APERCU</div></span>
                 </div>
                 <div class="p-slide-product">
-                    <div class="p-slide-img"><img src="assets/images/fondante-Travaillé_5.jpg"></div>
+                    <div class="p-slide-img base_img4"></div>
                     <span class="p-slide-title">Base crème <b>- Fondante </b><br> <b>12.50 €</b></span>
-                    <span class="p-slide-title2"> Beurre de Karité & Miel</span>
+                    <span class="p-slide-title2"><span>Huile d’avocat et Uréa</span>
+                    <div class="button_apercu">APERCU</div></span>
                 </div>
             </div>
         </div>
@@ -293,6 +498,63 @@
             <div class="button">#SKANMYSKIN</div>
             <img src="assets/images/bases_gif.png" style="width: 100%">
         </div>
-</div>
+    </div>
+    <div class="title title_new">LES<br> NOUVEAUTÉS  </div>
+    <div class="nouveautes">
+        <div class="left">
+
+        <div class="products">
+            <div class="product-container">
+                <div class="p-slide-product">
+                    <div class="p-slide-img nouveaute_img1"></div>
+                    <span class="p-slide-title">HUILE APAISANTE RÉGÉNÉRANTE<br> <b>34.90 €</b></span>
+                    <span class="p-slide-title2"><span>Noyaux d´Abricot BIO, Huile d´Argan et Huile de Cramberry</span>
+                         <div class="button_apercu">APERCU</div></span>
+                </div>
+                <div class="p-slide-product">
+                    <div class="p-slide-img nouveaute_img2"></div>
+                    <span class="p-slide-title">SÉRUM REMODELANT COLLAGÈNE<br> <b>24.90 €</b></span>
+                    <span class="p-slide-title2"><span>Extrait de soja, Extrait de verveine et Extrait de graines d’Aneth</span>
+                    <div class="button_apercu">APERCU</div></span>
+                </div>
+            </div>
+            <div class="product-container">
+                <div class="p-slide-product">
+                    <div class="p-slide-img nouveaute_img3"></div>
+                    <span class="p-slide-title">SÉRUM ÉCLAT CONTOUR DES YEUX<br> <b>24.90 €</b></span>
+                    <span class="p-slide-title2"><span>Actif botanique naturel de fleurs et Extrait de “reine de montagne"</span>
+                         <div class="button_apercu">APERCU</div></span>
+                </div>
+                <div class="p-slide-product">
+                    <div class="p-slide-img nouveaute_img4"></div>
+                    <span class="p-slide-title">MOUSSE NETTOYANTE APAISANTE<br> <b>9.90 €</b></span>
+                    <span class="p-slide-title2"><span>Bisabolol, Papaine et figue de Barbarie</span>
+                    <div class="button_apercu">APERCU</div></span>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="right" style="margin: auto">
+            <img src="assets/images/nouveautes/visage_nouveaute.jpg" style="width: 100%">
+        </div>
+       </div>
+    <div class="title title_new">ABBI <b>&MOI</b>  </div>
+    <div class="avis">
+        <div class="left">
+    <div class="text_small"> Ils témoignent...</div>
+    <hr>
+     <div class="text">“ Avec le booster éclat du teint mon teint n'a rien avoir avec avant ! Mon teint est plus uniforme et plus lumineux.“</div>
+            <div class="avis_name p-slide-title2">Rolland</div>
+            <div class="p-slide-img actif_img4"></div>
+            <div class="button">DÉTAIL PRODUIT</div>
+  </div>
+        <div class="right">
+            <img src="assets/images/vector_avis.png" style="width: 100%">
+            <img src="assets/images/img_avis.jpg" class="img_avis" >
+        </div>
+  </div>
+    <div class="title title_new">CONSULTATION <br><b>en ligne OFFERTE</b> </div>
+  </div>
+
 </body>
 </html>
